@@ -38,7 +38,7 @@ function Vijner() {
 
   const convertKey = () => {
     let textLen = text.length;
-    let newKey = key;
+    let newKey = key.toLowerCase();
 
     let i = 0;
     while (textLen > newKey.length) {
@@ -85,7 +85,7 @@ function Vijner() {
     let data = [];
 
     for (let i = 0; i < newKey.length; i++) {
-      let textIndex = list.indexOf(text[i]);
+      let textIndex = list.indexOf(text[i].toLowerCase());
       data.push(newList[i][textIndex]);
     }
 
@@ -96,7 +96,7 @@ function Vijner() {
     let data = [];
 
     for (let i = 0; i < newKey.length; i++) {
-      let index = newList[i].indexOf(text[i]);
+      let index = newList[i].indexOf(text[i].toLowerCase());
 
       data.push(list[index]);
     }
