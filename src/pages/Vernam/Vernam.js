@@ -38,7 +38,7 @@ function Vernam() {
   const encrypt = (newKey) => {
     let arr = [];
     for (let i = 0; i < newKey.length; i++) {
-      const number = dec(text[i], newKey[i]);
+      const number = dec(text[i].toLowerCase(), newKey[i]);
       const result = findSymbol(number);
       arr.push(result);
     }
@@ -83,7 +83,7 @@ function Vernam() {
 
   const convertKey = () => {
     let textLen = text.length;
-    let newKey = key;
+    let newKey = key.toLowerCase();
 
     let i = 0;
     while (textLen > newKey.length) {
