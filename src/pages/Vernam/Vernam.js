@@ -49,7 +49,7 @@ function Vernam() {
     let arr = [];
 
     for (let i = 0; i < newKey.length; i++) {
-      const number = dec(text[i], newKey[i]);
+      const number = dec(text[i].toLowerCase(), newKey[i]);
       const res = findSymbol(number);
       arr.push(res);
     }
@@ -59,8 +59,12 @@ function Vernam() {
   const dec = (a, b) => {
     let arr = [];
 
+    console.log("a -", a);
+
     a = table[a];
     b = table[b];
+
+    console.log("a -", a);
 
     for (let i = 0; i < a.length; i++) {
       if (a[i] === b[i]) {
