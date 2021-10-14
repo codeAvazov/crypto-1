@@ -53,6 +53,10 @@ function Sezar() {
 
     let b = a % length;
 
+    while (b < 0) {
+      b += length;
+    }
+
     return list[b];
   };
 
