@@ -1,11 +1,12 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav>
+    <Nav>
       <div>
-        <ul>
+        <ol>
           <li>
             <Link to="/sezar">
               <h4>Sezar</h4>
@@ -21,8 +22,22 @@ export default function Navbar() {
               <h4>Vernam</h4>
             </Link>
           </li>
-        </ul>
+          <li>
+            <Link to="/affin">
+              <h4>Affin</h4>
+            </Link>
+          </li>
+        </ol>
       </div>
-    </nav>
+    </Nav>
   );
 }
+
+const Nav = styled.nav`
+  ol {
+    li {
+      width: max-content;
+      margin-bottom: 10px;
+    }
+  }
+`;
