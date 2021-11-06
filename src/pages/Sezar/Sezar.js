@@ -9,6 +9,7 @@ function Sezar() {
   const [result, setResult] = useState("");
 
   const handleSetKey = (e) => {
+
     if (text === "") {
       toast.warning("Iltimos matnni kiriting !!!");
       return;
