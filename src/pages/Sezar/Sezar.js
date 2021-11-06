@@ -15,14 +15,14 @@ function Sezar() {
     }
     const { value } = e.target;
 
-    if (text.length < value) {
-      toast.warning(
-        "Kalit Matn uzunligiga teng yoki kichik son bo`lishi kerak !!! "
-      );
-      return;
-    }
+    // if (text.length < value) {
+    //   toast.warning(
+    //     "Kalit Matn uzunligiga teng yoki kichik son bo`lishi kerak !!! "
+    //   );
+    //   return;
+    // }
 
-    setKey(e.target.value);
+    setKey(value);
   };
 
   const handleSubmit = (type) => {
