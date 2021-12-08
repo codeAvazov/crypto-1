@@ -204,6 +204,7 @@ export default function Des() {
       let result = plusTextToKey(obj[i].key, tempR);
       result = shiftWithSTables(result);
       result = shiftWithP(result);
+      result = addLandR(result, obj[i].text["L"]);
 
       if (i !== 15) {
         obj[i + 1] = {
@@ -239,8 +240,6 @@ export default function Des() {
     }
     return res;
   };
-
-  const mod2 = (x, y) => (x === y ? "0" : "1");
 
   const shiftWithSTables = (arr) => {
     arr = separateArr(arr);
@@ -295,6 +294,18 @@ export default function Des() {
     return res;
   };
 
+  const addLandR = (r, l) => {
+    let res = [];
+    let len = r.length;
+
+    for (let i = 0; i < len; i++) {
+      let temp = mod2(l[i], r[i]);
+      res.push(temp);
+    }
+
+    return res;
+  };
+
   const shiftWithIP_1 = ({ text: { L, R } }) => {
     let res = [];
     let arr = [...R, ...L];
@@ -336,6 +347,8 @@ export default function Des() {
     });
     return res;
   };
+
+  const mod2 = (x, y) => (x === y ? "0" : "1");
 
   return (
     <Wrapper className="container">
@@ -379,6 +392,7 @@ export default function Des() {
           Result : <b className="text-success">{result}</b>
         </h2>
       </div>
+      <br />
     </Wrapper>
   );
 }
