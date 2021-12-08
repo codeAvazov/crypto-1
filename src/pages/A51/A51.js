@@ -51,6 +51,7 @@ export default function A51() {
 
   const encryptText = (tb, gk) => {
     tb = tb.map((i) => +i);
+    console.log(tb);
     let length = tb.length;
     let resArr = [];
 
@@ -58,6 +59,7 @@ export default function A51() {
       let v = decMod2([tb[i], gk[i]]);
       resArr.push(v);
     }
+    
     setResult(resArr.join(""));
   };
 

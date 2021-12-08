@@ -10,6 +10,7 @@ const list = [
   { id: uuidv4(), to: "/affin", title: "Affin" },
   { id: uuidv4(), to: "/a51", title: "A 5/1" },
   { id: uuidv4(), to: "/rc4", title: "RC4 " },
+  { id: uuidv4(), to: "/des", title: "DES " },
 ];
 
 export default function Navbar() {
